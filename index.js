@@ -3,7 +3,7 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -11,7 +11,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  for (i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -19,7 +23,7 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  return getSum(numbers) / (numbers.length - 1);
 }
 
 /**
@@ -27,7 +31,13 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let minNumber = numbers[0];
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] < minNumber) {
+      minNumber = numbers[i];
+    }
+  }
+  return minNumber;
 }
 
 /**
@@ -35,7 +45,13 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let maxNumber = numbers[0];
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] > maxNumber) {
+      maxNumber = numbers[i];
+    }
+  }
+  return maxNumber;
 }
 
 /**
@@ -43,7 +59,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  return getMax(numbers) - getMin(numbers);
 }
 
 /**
@@ -51,7 +67,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evenArray = [];
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+      evenArray.push(numbers[i]);
+    }
+  }
+  return evenArray;
 }
 
 /**
@@ -59,7 +81,13 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let oddArray = [];
+  for (i = 0; i < numbers.length; i++) {
+    if (Math.abs(numbers[i]) % 2 === 1) {
+      oddArray.push(numbers[i]);
+    }
+  }
+  return oddArray;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
